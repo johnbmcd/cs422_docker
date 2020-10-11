@@ -1,1 +1,4 @@
-docker run -d --rm -e DISPLAY -v /dev:/dev -v ~/cs422:/home/${USER}/cs422 -v ~/.ros_container:/root/.ros -v /tmp/.X11-unix:/tmp/.X11-unix cs422
+mkdir -p ~/.ros_container
+mkdir -p ~/cs422_ws
+
+docker run -d --rm -e DISPLAY -v /dev:/dev -v ~/cs422_ws:/home/${USER}/cs422_ws -v ~/.ros_container:/root/.ros -v /tmp/.X11-unix:/tmp/.X11-unix cs422
