@@ -7,8 +7,8 @@ This repo contains a docker container for use in cs422 Introduction to Robotics 
 To install and run the container you will need to be running Linux and will first need to install **docker communinty edition**. This will vary based on your particular operating system so you will need to find a suitable walk-through. 
 
 Here are a few for more common variants of Ubuntu:
-* [https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-18-04](Ubuntu 18.04)
-* [https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04](Ubuntu 20.04)
+* [Ubuntu 18.04](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-18-04)
+* [Ubuntu 20.04](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04)
 
 ## Building the container
 To build the container use the `build` script from the `cs422_docker` folder:
