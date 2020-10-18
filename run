@@ -1,3 +1,5 @@
+xhost +
+
 mkdir -p ~/.ros_container
 mkdir -p ~/cs422_ws
 
