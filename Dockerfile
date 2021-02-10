@@ -12,10 +12,20 @@ RUN apt-get update && apt-get install -y \
     terminator && \
     rm -rf /var/lib/apt/lists/*
 
+# CS427 Additions: Navigation stack + Turtlebot3 simulation packages
+RUN apt-get update && sudo apt-get install -y \
+	ros-melodic-turtlebot3-slam \
+	ros-melodic-slam-gmapping \
+	ros-melodic-turtlebot3-gazebo \
+	ros-melodic-turtlebot3-navigation \
+	ros-melodic-dwa-local-planner && \
+	rm -rf /var/lib/apt/lists/*
+
 RUN groupadd -g $GID -o $UNAME
 RUN useradd -m -u $UID -g $GID -G sudo -o -s /bin/bash $UNAME && echo "$UID:$GID" && echo "$UNAME ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
 USER $UNAME
 
 RUN echo source "/opt/ros/$ROS_DISTRO/setup.bash" >> ~/.bashrc
+RUN echo "export TURTLEBOT3_MODEL=waffle" >> ~/.bashrc
 
 CMD ["terminator"]
