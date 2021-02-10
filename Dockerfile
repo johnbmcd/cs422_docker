@@ -13,7 +13,7 @@ RUN apt-get update && apt-get install -y \
     rm -rf /var/lib/apt/lists/*
 
 RUN groupadd -g $GID -o $UNAME
-RUN useradd -m -u $UID -g $GID -o -s /bin/bash $UNAME
+RUN useradd -m -u $UID -g $GID -G sudo -o -s /bin/bash $UNAME && echo "$UID:$GID" && echo "$UNAME ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
 USER $UNAME
 
 RUN echo source "/opt/ros/$ROS_DISTRO/setup.bash" >> ~/.bashrc
