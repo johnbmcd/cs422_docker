@@ -11,14 +11,14 @@ RUN apt-get update && apt-get install -y \
     dbus-x11 \
     terminator && \
     rm -rf /var/lib/apt/lists/*
-
+C
 # CS427 Additions: Navigation stack + Turtlebot3 simulation packages
 RUN apt-get update && sudo apt-get install -y \
-	ros-melodic-turtlebot3-slam \
-	ros-melodic-slam-gmapping \
-	ros-melodic-turtlebot3-gazebo \
-	ros-melodic-turtlebot3-navigation \
-	ros-melodic-dwa-local-planner && \
+	ros-${ROS_DISTRO}-turtlebot3-slam \
+	ros-${ROS_DISTRO}-slam-gmapping \
+	ros-${ROS_DISTRO}-turtlebot3-gazebo \
+	ros-${ROS_DISTRO}-turtlebot3-navigation \
+	ros-${ROS_DISTRO}-dwa-local-planner && \
 	rm -rf /var/lib/apt/lists/*
 
 RUN groupadd -g $GID -o $UNAME
