@@ -11,7 +11,7 @@ RUN apt-get update && apt-get install -y \
     dbus-x11 \
     terminator && \
     rm -rf /var/lib/apt/lists/*
-C
+
 # CS427 Additions: Navigation stack + Turtlebot3 simulation packages
 RUN apt-get update && sudo apt-get install -y \
 	ros-${ROS_DISTRO}-turtlebot3-slam \
