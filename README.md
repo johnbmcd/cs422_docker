@@ -1,4 +1,4 @@
-# cs422_docker **(Beta)**
+# CS422 Docker Container
 Docker container for cs422 Introduction to Robotics
 
 This repo contains an ***experimental*** docker container setup for use in cs422 Introduction to Robotics module. **The repo is being made available as a convenience for students that have a familiarity with docker and who would rather use docker than the virtualbox image.** 
