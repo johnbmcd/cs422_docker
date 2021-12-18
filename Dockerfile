@@ -14,7 +14,7 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
     rm -rf /var/lib/apt/lists/*
 
 # CS427 Additions: Navigation stack + Turtlebot3 simulation packages
-RUN apt-get update && sudo apt-get install -y \
+RUN apt-get update && apt-get install -y \
 	ros-${ROS_DISTRO}-turtlebot3-slam \
 	ros-${ROS_DISTRO}-slam-gmapping \
 	ros-${ROS_DISTRO}-turtlebot3-gazebo \
